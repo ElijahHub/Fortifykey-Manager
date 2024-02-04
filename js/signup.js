@@ -1,6 +1,8 @@
 const form = document.getElementById('login-form');
 const userError = document.querySelector('.user-error');
+const form_btn = document.getElementById('form-btn');
 const userApi = 'https://fortifykey-server.onrender.com/user';
+
 const encFunc = (msg) => {
   let e = new Encrypt('F23-FK100', msg);
   return e.messageEncrypt();
@@ -19,6 +21,7 @@ class Signup {
 
     this.form.addEventListener('submit', (e) => {
       e.preventDefault();
+      form_btn.setAttribute('disabled', 'true');
 
       let error = 0;
 

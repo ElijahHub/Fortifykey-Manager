@@ -108,7 +108,7 @@ class Gene {
 
 const generate = new Gene();
 
-if (window.location.pathname === '') {
+if (window.location.pathname) {
   btn.addEventListener('click', (e) => {
     e.preventDefault();
     const length = +len.value;
