@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../img/favicon/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/generate-password.css" />
+    <link rel="stylesheet" href="../css/dashStyle.css" />
+    <script defer src="../js/auth.js"></script>
+    <title>Fortifykey Manager | Dashboard</title>
+  </head>
+  <body>
+    <div class="container container-grid-1">
+      <!-- Header -->
+      <header id="header" class="header-container">
+        <div class="logo invisible" id="logo-container">
+          <i id="menu" class="menu bi bi-list"></i>
+          <a href="../index.html" class="logo-container">
+            <img src="../img/logo.png" alt="logo" class="logo-img" />
+          </a>
+        </div>
+        <div class="text">
+          <h1 class="text-content">Dashboard</h1>
+        </div>
+        <div class="nav-element">
+          <i class="bi bi-bell" id="notify-bell"></i>
+          <span class="notify hidden" id="notify-count"></span>
+          <button class="logout btn">Logout</button>
+        </div>
+      </header>
+      <!-- End -->
+
+      <!-- Side bar -->
+      <aside id="sidebar" class="side-bar">
+        <div class="logo">
+          <a href="../index.html" class="logo-container">
+            <img src="../img/logo.png" alt="logo" class="logo-img" />
+          </a>
+          <i id="close" class="bi bi-x"></i>
+        </div>
+        <ul class="content">
+          <li>
+            <i class="bi bi-speedometer2"></i>
+            <a href="#" id="dashboard-link" class="dashboard-links"
+              >Dashboard</a
+            >
+          </li>
+          <li>
+            <i class="bi bi-lock"></i>
+            <a href="#" id="generate-password-link" class="dashboard-links"
+              >Generate Password</a
+            >
+          </li>
+          <li>
+            <i class="bi bi-safe"></i>
+            <a href="#" id="password-save-link" class="dashboard-links"
+              >Password save</a
+            >
+          </li>
+          <li>
+            <i class="bi bi-key"></i>
+            <a href="#" id="key-manager-link" class="dashboard-links"
+              >Key Manager</a
+            >
+          </li>
+          <li>
+            <i class="bi bi-question-circle"></i>
+            <a href="#" id="help-link" class="dashboard-links">Help</a>
+          </li>
+        </ul>
+        <ul class="footer-content">
+          <li>
+            <i class="bi bi-person-fill"></i>
+            <a href="#" id="account-link" class="dashboard-links">Account</a>
+          </li>
+          <li>
+            <i class="bi bi-gear-wide-connected"></i>
+            <a href="#" id="setting-link" class="dashboard-links">Setting</a>
+          </li>
+        </ul>
+      </aside>
+      <!-- End -->
+
+      <!-- Mian -->
+      <main id="main" class="main">
+        <div id="dashboard" class="main-element dashboard"></div>
+        <div
+          id="generate-password"
+          class="main-element generate-password hidden"
+        ></div>
+        <div id="password-save" class="main-element password-save hidden"></div>
+        <div id="key-manager" class="main-element key-manager hidden"></div>
+        <div id="help" class="main-element help hidden"></div>
+        <div id="account" class="main-element account hidden"></div>
+        <div id="setting" class="main-element setting hidden"></div>
+      </main>
+      <!-- End -->
+    </div>
+    <!-- Scripts -->
+    <script>
+      window.Promise ||
+        document.write(
+          '<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"><\/script>'
+        );
+      window.Promise ||
+        document.write(
+          '<script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20171210/classList.min.js"><\/script>'
+        );
+      window.Promise ||
+        document.write(
+          '<script src="https://cdn.jsdelivr.net/npm/findindex_polyfill_mdn"><\/script>'
+        );
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <!--  -->
+    <script src="../js/encryptClass.js"></script>
+    <script defer src="../js/component/generate-password.js"></script>
+    <script defer src="../js/dashboard.js"></script>
+  </body>
+</html>

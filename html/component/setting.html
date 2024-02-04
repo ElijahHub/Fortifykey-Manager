@@ -1,0 +1,74 @@
+<div class="set-info">
+  <h2>Settings</h2>
+  <ul>
+    <li>
+      <h3>Username :</h3>
+      <p class="setting-username"></p>
+    </li>
+    <li>
+      <h3>Email :</h3>
+      <p class="setting-email"></p>
+    </li>
+    <li>
+      <h3>Password :</h3>
+      <p>**********</p>
+      <button type="button" id="btn-change">Change Password</button>
+    </li>
+    <li>
+      <h3>Remove account :</h3>
+      <button type="button" id="delete-account">Delete account</button>
+    </li>
+  </ul>
+</div>
+
+<div class="overlay-save overlay-setting hidden"></div>
+
+<div class="confirm change-password hidden">
+  <form class="change-btn">
+    <div class="form-control">
+      <label for="old-password">Old Password</label>
+      <input type="password" id="old-password" required />
+      <span class="error oldpass-error"></span>
+    </div>
+    <div class="form-control">
+      <label for="new-password">New Password</label>
+      <input type="password" id="new-password" required />
+      <span class="error newpass-error"></span>
+    </div>
+    <div class="form-control">
+      <label for="confirm-new-password">Confirm new Password</label>
+      <input type="password" id="confirm-new-password" required />
+      <span class="error confirmpass-error"></span>
+    </div>
+    <div class="btn-container">
+      <button type="button" class="change-cancel">Cancel</button>
+      <button type="submit">Change</button>
+    </div>
+  </form>
+</div>
+
+<div class="delete-account-warning hidden">
+  <p>
+    Are you sure you want to delete this account, your won't be able to access
+    this account anymore all saved password will also be unretrivable. It is
+    advice to consider this decision well.
+  </p>
+  <div class="delete-warning-btn-container">
+    <button type="button" id="delete-warning-cancel">Cancel</button>
+    <button type="button" id="delete-warning-okay">Ok</button>
+  </div>
+</div>
+
+<div class="confirm confirm-delete hidden">
+  <form class="confirm-delete-form">
+    <div class="form-control">
+      <label for="delete-account-pass">Enter Password</label>
+      <input type="password" id="delete-account-pass" required />
+    </div>
+    <span class="error delete-account-error"></span>
+    <div class="btn-container delete-btn">
+      <button type="button" class="cancel-delete-form">Cancel</button>
+      <button type="submit">Delete</button>
+    </div>
+  </form>
+</div>

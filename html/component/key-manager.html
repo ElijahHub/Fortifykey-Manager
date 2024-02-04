@@ -1,0 +1,55 @@
+<div class="generateKey">
+  <h3>Generate Encryption Key</h3>
+  <div class="key-info">
+    <i class="bi bi-person"></i>
+    <h3>UserName :</h3>
+    <p id="key-user"></p>
+  </div>
+  <button type="button" class="keyBtn">Generate Key</button>
+  <p class="error genkey-error"></p>
+  <hr />
+  <h4>Key</h4>
+  <ul id="generate-key-container"></ul>
+</div>
+
+<div class="overlay-save overlay-key hidden"></div>
+
+<div class="confirm key hidden">
+  <div class="form-control">
+    <label for="key-pass">Enter Password</label>
+    <input type="password" id="key-pass" required />
+  </div>
+  <span class="error key-error"></span>
+  <div class="btn-container">
+    <button type="button" id="key-cancel">Cancel</button>
+    <button type="button" id="key-generate">Generate</button>
+  </div>
+</div>
+
+<div class="confirm key-main hidden">
+  <div class="form-control">
+    <label for="key-pass-main">Enter Password</label>
+    <input type="password" id="key-pass-main" required />
+  </div>
+  <span class="error key-error-main"></span>
+  <div class="btn-container">
+    <button type="button" id="key-cancel-main">Cancel</button>
+    <button type="button" id="key-generate-main">View</button>
+  </div>
+</div>
+
+<div class="confirm show-key hidden">
+  <h2>Key <i class="bi bi-key"></i></h2>
+  <div class="down">
+    <p class="key-display"></p>
+    <button type="button" class="unshow-key">OK</button>
+  </div>
+</div>
+
+<div class="confirm show-key-main hidden">
+  <h2>Key <i class="bi bi-key"></i></h2>
+  <div class="down">
+    <p class="key-display-main"></p>
+    <button type="button" class="unshow-key-main">OK</button>
+  </div>
+</div>
