@@ -17,14 +17,14 @@ This is a simple CRUD (Create, Read, Update, Delete) application for managing pa
 ### Prerequisites
 
 - Node.js installed
-- json-seerver installed (or another database system supported by your chosen backend framework)
+- json-seerver installed 
 
 ### Installation
 
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/your-username/password-manager.git
+   git clone https://github.com/ElijahHub/Fortifykey-Manager.git
 
 ## Technologies Used
 
