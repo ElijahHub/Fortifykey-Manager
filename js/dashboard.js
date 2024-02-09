@@ -849,6 +849,7 @@ const keyManagerFunc = async () => {
   //? Storing generated key
   cancelKey.addEventListener('click', (e) => {
     e.preventDefault();
+    cancelKey.setAttribute('disabled', 'true');
     fetch(`${keysApi}`, {
       method: 'POST',
       headers: {
@@ -869,7 +870,8 @@ const keyManagerFunc = async () => {
         if (data) {
           overlay.classList.add('hidden');
           showKey.classList.add('hidden');
-          keysDisplay();
+          cancelKey.submit();
+          // keysDisplay();
         }
       });
   });

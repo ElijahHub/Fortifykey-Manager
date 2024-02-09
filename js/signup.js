@@ -1,6 +1,7 @@
 const form = document.getElementById('login-form');
 const userError = document.querySelector('.user-error');
 const form_btn = document.getElementById('form-btn');
+const loader = document.querySelector('.loader');
 const userApi = 'https://fortifykey-server.onrender.com/user';
 
 const encFunc = (msg) => {
@@ -22,6 +23,7 @@ class Signup {
     this.form.addEventListener('submit', (e) => {
       e.preventDefault();
       form_btn.setAttribute('disabled', 'true');
+      loader.classList.remove('hidden');
 
       let error = 0;
 
@@ -45,6 +47,7 @@ class Signup {
         fetch(`${userApi}?username=${this.object.username}`)
           .then((res) => res.json())
           .then((data) => {
+            loader.classList.add('hidden');
             if (data.length !== 0) {
               userError.innerText = 'User name already exist';
               setTimeout(() => (userError.innerText = ''), 3000);
@@ -58,6 +61,7 @@ class Signup {
               })
                 .then((res) => res.json())
                 .then((data) => {
+                  loader.classList.add('hidden');
                   if (data) {
                     sessionStorage.setItem('logger', this.object.username);
                     this.form.submit();

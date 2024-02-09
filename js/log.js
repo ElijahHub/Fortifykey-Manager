@@ -1,6 +1,7 @@
 const form = document.getElementById('login-form');
 const userError = document.querySelector('.user-error');
 const passError = document.querySelector('.password-error');
+const loader = document.querySelector('.loader');
 const usersApi = 'https://fortifykey-server.onrender.com/user';
 
 //decrypt function
@@ -26,6 +27,7 @@ class Login {
 
     this.form.addEventListener('submit', (e) => {
       e.preventDefault();
+      loader.classList.remove('hidden');
       let error = 0;
 
       self.fields.forEach((field) => {
@@ -42,6 +44,7 @@ class Login {
         fetch(`${usersApi}?username=${object.username}`)
           .then((res) => res.json())
           .then((data) => {
+            loader.classList.add('hidden');
             if (data.length !== 0) {
               let decryptPass = dencFunc(data[0].password);
               if (decryptPass === object.password) {

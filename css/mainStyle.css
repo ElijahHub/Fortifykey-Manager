@@ -1024,7 +1024,7 @@ img {
   }
 
   .nav-list-mobile {
-    top: 70px;
+    top: 100%;
     width: 250px;
     height: auto;
     flex-direction: column;
