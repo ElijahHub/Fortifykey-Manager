@@ -22,8 +22,6 @@ class Signup {
 
     this.form.addEventListener('submit', (e) => {
       e.preventDefault();
-      form_btn.setAttribute('disabled', 'true');
-      loader.classList.remove('hidden');
 
       let error = 0;
 
@@ -44,6 +42,8 @@ class Signup {
       });
 
       if (error == 0) {
+        form_btn.setAttribute('disabled', 'true');
+        loader.classList.remove('hidden');
         fetch(`${userApi}?username=${this.object.username}`)
           .then((res) => res.json())
           .then((data) => {

@@ -27,7 +27,7 @@ class Login {
 
     this.form.addEventListener('submit', (e) => {
       e.preventDefault();
-      loader.classList.remove('hidden');
+
       let error = 0;
 
       self.fields.forEach((field) => {
@@ -41,6 +41,7 @@ class Login {
       });
 
       if (error == 0) {
+        loader.classList.remove('hidden');
         fetch(`${usersApi}?username=${object.username}`)
           .then((res) => res.json())
           .then((data) => {
