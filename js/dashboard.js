@@ -870,8 +870,7 @@ const keyManagerFunc = async () => {
         if (data) {
           overlay.classList.add('hidden');
           showKey.classList.add('hidden');
-          cancelKey.submit();
-          // keysDisplay();
+          window.location.href = 'dashboard.html?';
         }
       });
   });
